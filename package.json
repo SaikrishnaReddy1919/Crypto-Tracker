@@ -16,8 +16,10 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "cd src/backend && node api.js",
+    "build": "npm run build",
+    "install-client" : "npm install",
+    "heroku-postbuild":"npm run install-client && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "client" : "npm start",

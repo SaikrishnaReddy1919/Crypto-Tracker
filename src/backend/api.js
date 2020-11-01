@@ -23,6 +23,11 @@ app.get("/", (req, res) => {
   getCoins();
 });
 
+//heroku
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static("../../build"));
+}
+
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
