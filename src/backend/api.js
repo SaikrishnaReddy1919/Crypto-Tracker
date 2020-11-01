@@ -4,7 +4,7 @@ const app = express();
 var cors = require("cors");
 
 app.use(cors())
-const port = 4000;
+const port = process.env.PORT || 4000 ;
 
 const CoinGeckoClient = new CoinGecko();
 
