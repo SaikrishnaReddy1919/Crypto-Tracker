@@ -4,6 +4,7 @@ const app = express();
 var cors = require("cors");
 
 app.use(cors())
+require("dotenv").config();
 const port = process.env.PORT || 4000 ;
 
 const CoinGeckoClient = new CoinGecko();
