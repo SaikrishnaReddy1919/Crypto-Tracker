@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:4000",
+  "main" : "src/backend api.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
@@ -18,13 +19,13 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cd src/backend && node api.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "client" : "npm start",
     "server" : "cd src/backend && node api.js",
-    "dev" : "concurrently \"npm run server\" \"npm run client\""
+    "run" : "concurrently \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": [
